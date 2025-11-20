@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPoint</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation Bar (Desktop) -->
+    <header class="header">
+
+        <div class="logo">
+            <h1><a href="#home">GreenPoint</a></h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#hiw">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth-buttons">
+            <!--
+            <button class="btn btn-secondary">
+                <i class="fas fa-sign-in-alt"></i> Log In
+            </button>
+
+            <button class="btn btn-primary">
+                <i class="fas fa-user-plus"></i> Sign Up
+            </button> 
+            -->
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+
+        <div class="hero-pattern"></div>
+
+        <div class="hero-content">
+            <h2 class="animate">The Heart of Green Mobility</h2>
+            <p class="animate delay-1">
+                Join our decentralized network of EV charging stations and help create a sustainable future while
+                earning passive income.
+            </p>
+
+            <div class="cta-buttons animate delay-2">
+                <a href="#find-charger" class="btn btn-primary btn-large">
+                    <i class="fas fa-charging-station"></i> Find Charger
+                </a>
+                <a href="#hiw" class="btn btn-secondary btn-large">
+                    <i class="fas fa-home"></i> Become Host
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-stats container animate delay-3">
+            <!--<div class="hero-stat-card">
+                <div class="hero-stat-number">15</div>
+                <p>Active Hosts</p>
+            </div>
+
+            <div class="hero-stat-card">
+                <div class="hero-stat-number">100K+</div>
+                <p>Host Earnings</p>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Find Charger Section -->
+    <section class="find-charger-section" id="find-charger">
+
+        <h3 class="find-section-title">Find a Charging Station</h3>
+
+        <div class="map-container-wrapper">
+            <div id="mapid" class="map-container">
+            </div>
+
+            <div class="map-search-bar">
+                <input type="text" id="searchInput" placeholder="Search locations...">
+                <button class="search-btn" id="searchButton" aria-label="Search">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+
+            <div class="charger-count-bubble" id="chargerCountDisplay">
+                0 chargers found
+            </div>
+
+            <button class="locate-btn" id="locateButton" aria-label="Locate me">
+                <i class="fas fa-location-arrow"></i>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- How GreenPoint Works -->
+    <section class="hiw-section" id="hiw">
+
+        <div class="container">
+            <h2 class="hiw-title">How GreenPoint Works</h2>
+            <p class="hiw-subtitle">Turn your EV charger into a steady income source</p>
+
+            <div class="hiw-grid">
+
+                <div class="glass-card">
+                    <div class="step-icon-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>1. List Your Charger</h3>
+                    <p>Sign up and add your charger location with details</p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="step-icon-box">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>2. EV Owners Book</h3>
+                    <p>Drivers nearby find your charger through the app</p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="step-icon-box">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>3. Earn Income</h3>
+                    <p>Get paid each time someone uses your charger</p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="step-icon-box">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>4. Support Sustainability</h3>
+                    <p>Be part of the EV revolution and reduce emissions</p>
+                </div>
+
+            </div>
+
+            <a href="https://wa.me/995598508001" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                Write us on WhatsApp to Become a Host <!--id="hiwHostCta"-->
+            </a>
+        </div>
+
+    </section>
+
+<!-- 
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-subtitle">Have questions? We're here to help</p>
+
+            <div class="contact-content-grid">
+
+                <div class="contact-info">
+                    <div class="email-box">
+                        <div class="email-icon-box">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="email-headline">Email Us</h3>
+                            <p class="email-address">support@greenpoint.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+
+                        <button type="submit" class="btn btn-primary btn-rect">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <footer class="footer">
+        <div class="container footer-content-grid">
+
+            <div class="footer-branding">
+                <div class="logo-box">
+                    <!--<i class="fas fa-leaf footer-logo-icon"></i>-->
+                    <span class="footer-logo-text">GreenPoint</span>
+                </div>
+                <p class="footer-mission">Empowering EV adoption, one charger at a time</p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <div class="contact-item">
+                    <i class="fas fa-envelope footer-icon"></i>
+                    <a href="mailto:support@greenpoint.com">support@greenpoint.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone footer-icon"></i>
+                    <span>+995 598 50 80 01</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt footer-icon"></i>
+                    <span>Tbilisi, Georgia</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright-bar">
+            <div class="container footer-copyright-content">
+                <span class="copyright-text">© 2025 GreenPoint</span>
+                <div class="legal-links">
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================= -->
+    <!-- --- SIGN UP MODAL STRUCTURE --- -->
+    <!-- ========================================= -->
+    <div id="signupModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close Modal">&times;</button>
+
+            <!-- STEP 1: Role Selection View (Default View) -->
+            <div id="roleSelectionView" class="modal-view active-view">
+                <h2 class="modal-title">Join the GreenPoint Network</h2>
+                <p class="modal-subtitle">Choose how you'd like to participate:</p>
+                <div class="role-cards-grid">
+
+                    <!-- Driver Card -->
+                    <div class="role-card" data-role="driver">
+                        <i class="fa-solid fa-car role-icon"></i>
+                        <h3>I am an EV Driver</h3>
+                        <p>Find charging stations, book energy, and charge your EV guarante.</p>
+                        <!-- EDITED: Using button--modal-cta for highly rounded style -->
+                        <button class="btn btn-primary button--modal-cta select-role-btn">
+                            Select Driver
+                        </button>
+                    </div>
+
+                    <!-- Host Card -->
+                    <div class="role-card" data-role="host">
+                        <i class="fas fa-home role-icon"></i>
+                        <h3>I want to be a Host</h3>
+                        <p>Share your personal charger, set your rates, and earn passive income.</p>
+                        <!-- EDITED: Using button--modal-cta for highly rounded style -->
+                        <button class="btn btn-primary button--modal-cta select-role-btn">
+                            Select Host
+                        </button>
+                    </div>
+
+                </div>
+                <p class="modal-switch-prompt">
+                    Already a member? <a href="#" id="openLoginFromSignup">Log In</a>
+                </p>
+            </div>
+
+            <!-- STEP 2: Registration Form View (Hidden by default) -->
+            <div id="registrationFormView" class="modal-view">
+                <button id="backToRoles" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Role
+                    Selection</button>
+                <h2 id="formTitle" class="modal-title"></h2>
+
+                <!-- Driver Form -->
+                <form id="driverForm" class="registration-form" data-role="driver">
+                    <label for="driver-name">Full Name</label>
+                    <input type="text" id="driver-name" name="name" placeholder="John Doe" required>
+
+                    <label for="driver-email">Email</label>
+                    <input type="email" id="driver-email" name="email" placeholder="john.doe@example.com" required>
+
+                    <label for="driver-password">Password</label>
+                    <input type="password" id="driver-password" name="password" required>
+
+                    <button type="submit" class="btn btn-primary">Register as Driver</button>
+                </form>
+
+                <!-- Host Form -->
+                <form id="hostForm" class="registration-form" data-role="host">
+                    <label for="host-name">Full Name</label>
+                    <input type="text" id="host-name" name="name" placeholder="Jane Smith" required>
+
+                    <label for="host-email">Email</label>
+                    <input type="email" id="host-email" name="email" placeholder="jane.smith@example.com" required>
+
+                    <label for="host-charger-type">Charger Type</label>
+                    <select id="host-charger-type" name="charger-type" required>
+                        <option value="">Select Charger Type...</option>
+                        <option value="level2">Level 2 (240V)</option>
+                        <option value="dcfc">DC Fast Charger</option>
+                    </select>
+
+                    <label for="host-password">Password</label>
+                    <input type="password" id="host-password" name="password" required>
+
+                    <button type="submit" class="btn btn-primary">Register as Host</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close Login Modal">&times;</button>
+
+            <div class="modal-view active-view" style="display: block;">
+                <h2 class="modal-title">Welcome Back!</h2>
+                <p class="modal-subtitle">Log in to manage your GreenPoint account.</p>
+
+                <form id="loginForm" class="registration-form active-form" onsubmit="handleLogin(event)">
+
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" placeholder="your.email@example.com" required>
+
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                </form>
+
+                <p class="modal-switch-prompt">
+                    Don't have an account? <a href="#" id="openSignupFromLogin">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+     <!-- WhatsApp Float Button -->
+<a href="https://wa.me/995598508001" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+</a>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-nav-bar">
+        <a href="#home" class="mobile-nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#find-charger" class="mobile-nav-link">
+            <i class="fas fa-charging-station"></i>
+            <span>Find</span>
+        </a>
+        <a href="#hiw" class="mobile-nav-link">
+            <i class="fas fa-handshake-angle"></i>
+            <span>Host</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+
+
+
+    <script src="map.js"></script>
+    <script src="main.js"></script>
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

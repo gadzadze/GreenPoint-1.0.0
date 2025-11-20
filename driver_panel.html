@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Driver Panel</title>
+</head>
+<body>
+  <section class="dashboard-page" id="driverDashboard">
+            <div class="container">
+                <h2 class="dashboard-welcome">Welcome back, <span id="dashboardUserName">Driver</span>!</h2>
+                <p class="dashboard-subtitle">Your GreenPoint Charging Stats at a Glance</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-charging-station"></i>
+                        <div class="stat-number" id="totalCharges">0</div>
+                        <p class="stat-label">Total Charges</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-plug"></i>
+                        <div class="stat-number" id="totalKwh">0 kWh</div>
+                        <p class="stat-label">Energy Consumed</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-leaf"></i>
+                        <div class="stat-number" id="co2Saved">0 T</div>
+                        <p class="stat-label">CO₂ Saved</p>
+                    </div>
+                </div>
+
+                <div class="data-section">
+                    <h3>Monthly Usage Trend</h3>
+                    <div class="chart-placeholder" id="usageChart">
+                        <p>Chart data will load here...</p>
+                    </div>
+                </div>
+
+                <div class="activity-section">
+                    <h3>Recent Charges</h3>
+                    <table class="data-table" id="chargeHistory">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Host Location</th>
+                                <th>kWh</th>
+                                <th>Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td colspan="4" style="text-align: center; opacity: 0.7;">No recent charges found.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Host Panel</title>
+</head>
+<body>
+  
+        <section class="dashboard-page" id="hostDashboard">
+            <div class="container">
+                <h2 class="dashboard-welcome">Hello, <span id="hostDashboardUserName">Host</span>!</h2>
+                <p class="dashboard-subtitle">Your Charger's Performance Overview</p>
+
+                <!-- Host Key Stats Section -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-wallet"></i>
+                        <div class="stat-number" id="totalEarnings">$0.00</div>
+                        <p class="stat-label">Lifetime Earnings</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-handshake"></i>
+                        <div class="stat-number" id="totalBookings">0</div>
+                        <p class="stat-label">Charging Sessions</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <div class="stat-number" id="uptimePercent">0</div>
+                        <p class="stat-label">Availability</p>
+                    </div>
+                </div>
+
+                <!-- Earnings Chart Section -->
+                <div class="data-section">
+                    <h3>Monthly Revenue</h3>
+                    <div class="chart-placeholder" id="revenueChart">
+                        <p>Monthly Revenue Trend Chart</p>
+                    </div>
+                </div>
+
+                <!-- Upcoming Bookings Table -->
+                <div class="activity-section">
+                    <h3>Upcoming Bookings</h3>
+                    <table class="data-table" id="bookingHistory">
+                        <thead>
+                            <tr>
+                                <th>Date/Time</th>
+                                <th>Driver ID</th>
+                                <th>Est. Duration</th>
+                                <th>Est. Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Booking rows will be injected by JavaScript -->
+                            <tr><td colspan="4" style="text-align: center; opacity: 0.7;">No upcoming reservations.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+</body>
+</html>
