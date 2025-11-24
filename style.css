@@ -151,7 +151,7 @@ body {
 /* --- Hero Main Content (Text and Buttons) --- */
 .hero-content {
     /* Auto margins to push content away from the header */
-    margin: auto;
+    margin: 130px 0;
     /* This centers the block of content, but align-items in .hero-section handles center overall */
     max-width: 1000px;
     padding: 0px 20px;
@@ -1327,3 +1327,4 @@ body {
         right: 15px;
     }
 }
+
